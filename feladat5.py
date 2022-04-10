@@ -17,7 +17,7 @@ def ujablak():
     sz1.grid(row=1)
     sz2.grid(row=2)
     m1.grid(row=1, column=2, sticky=W)
-    m2.grid(row=1, column=2, sticky=W)
+    m2.grid(row=2, column=2, sticky=W)
 
     a=eval(mezo1.get())
     b=eval(mezo2.get())
@@ -32,6 +32,7 @@ def ujablak():
     m2.insert(0,str(terfogat))
 
     abl2.mainloop()
+
 
 szoveg1=Label(abl1, text='a:')
 szoveg2=Label(abl1, text='b:')
