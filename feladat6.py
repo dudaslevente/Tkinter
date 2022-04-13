@@ -15,7 +15,7 @@ def felszin():
         a=eval(mezo1.get())
         b=eval(mezo2.get())
         c=eval(mezo3.get())
-        felszin=2*(a*b+a*c+b*c) if a!=0 and b!=0 and c!=0 else 'Hiba!'
+        felszin=2*(a*b+a*c+b*c) if a!=0 and b!=0 and c!=0 else 'Hiba, az egyik adat 0!'
         mezo4.delete(0,END)
         mezo4.insert(0,str(felszin))
     
@@ -50,7 +50,7 @@ def terfogat():
         a=eval(mezo1.get()) 
         b=eval(mezo2.get())
         c=eval(mezo3.get())
-        terfogat=a*b*c if a!=0 and b!=0 and c!=0 else 'Hiba!'
+        terfogat=a*b*c if a!=0 and b!=0 and c!=0 else 'Hiba, az egyik adat 0!'
         mezo4.delete(0,END)
         mezo4.insert(0,str(terfogat))
 
@@ -84,9 +84,9 @@ def hfelszin():
     def szamit():
         r=eval(mezo1.get())
         m=eval(mezo2.get())
-        hfelszin=2*r*r*math.pi+2*r*math.pi*m
+        hfelszin=2*r*r*math.pi+2*r*math.pi*m if r and m !=0 else 'Hiba, az egyik adat 0!'
         mezo3.delete(0,END)
-        mezo3.insert(0,str("%.2f" % hfelszin))
+        mezo3.insert(0, str(hfelszin))
     
     abl3=Toplevel(foablak)
     abl3.title('A henger felszíne')
@@ -114,9 +114,9 @@ def hterfogat():
     def szamit():
         r=eval(mezo1.get()) 
         m=eval(mezo2.get())
-        hterfogat=r*r*math.pi*m 
+        hterfogat=r*r*math.pi*m if r and m !=0 else 'Hiba, az egyik adat 0!'
         mezo3.delete(0,END)
-        mezo3.insert(0,str("%.2f" % hterfogat))
+        mezo3.insert(0,str(hterfogat))
 
     abl3=Toplevel(foablak)
     abl3.title('A henger térfogata')
